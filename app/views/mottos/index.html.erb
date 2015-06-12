@@ -1,0 +1,31 @@
+<p id="notice"><%= notice %></p>
+
+<h1>Listing Mottos</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Content</th>
+      <th>Downloaded at</th>
+      <th>Remote image url</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @mottos.each do |motto| %>
+      <tr>
+        <td><%= motto.content %></td>
+        <td><%= motto.downloaded_at %></td>
+        <td><%= motto.remote_image_url %></td>
+        <td><%= link_to 'Show', motto %></td>
+        <td><%= link_to 'Edit', edit_motto_path(motto) %></td>
+        <td><%= link_to 'Destroy', motto, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Motto', new_motto_path %>
