@@ -10,14 +10,12 @@ class MottosController < ApplicationController
   # GET /mottos/1
   # GET /mottos/1.json
   def show
-    if params[:id]
-      set_motto
+    @motto = Motto.find_by_id(params[:id])
+    if @motto
+      @date = @motto.downloaded_at.to_date
     else
       redirect_to motto_path(Motto.last)
     end
-    
-    @date = @motto.downloaded_at.to_date
-    
   end
 
   # GET /mottos/new
