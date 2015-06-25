@@ -141,7 +141,7 @@ $(function () {
             break;
     }
     $(".xzName1").html(xzName);
-    $(".xzImg").css('background-image','url("/img/star'+id+'@3x.png")');
+    // $(".xzImg").css('background-image','url("/img/star'+id+'@3x.png")');
     $.ajax({
         url:"/xz/api?name="+name,
         type:"GET",

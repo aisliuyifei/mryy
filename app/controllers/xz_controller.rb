@@ -4,7 +4,7 @@ class XzController < ApplicationController
   
   def api
     date = DateTime.now.strftime("%Y-%m-%d")
-    name = params[:name]
+    @name = name = params[:name]
     xz = Xz.find_by_downloaded_at_and_name(date,name)
     if not xz
       html_response = nil
@@ -27,6 +27,14 @@ class XzController < ApplicationController
   end
   
   def detail
+    @name = params[:name]
+    
+    @id = Xz.all_names.index(@name).to_i+1
+    if @id<10
+      @id = "0#{@id}"
+    else
+      @id = "#{@id}"
+    end
   end
   
 
