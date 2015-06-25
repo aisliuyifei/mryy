@@ -1,0 +1,11 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  downloaded_at: MyString
+  name: MyString
+  innfo: MyText
+
+two:
+  downloaded_at: MyString
+  name: MyString
+  innfo: MyText

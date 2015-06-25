@@ -1,5 +1,11 @@
 Rails.application.routes.draw do
   resources :mottos
+  resources :xz do
+    collection do
+      get 'detail'
+      get 'api'
+    end
+  end
   
   root "mottos#show"
 

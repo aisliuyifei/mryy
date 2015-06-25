@@ -3,6 +3,7 @@
 require 'rubygems'
 require 'active_record'
 require './app/models/motto'
+require './app/models/xz'
 require 'open-uri'
 require 'net/http'
 
@@ -38,3 +39,33 @@ if date && content && img
     end
   end
 end
+
+
+class XzManager
+  def self.update_info(name)
+    html_response = nil
+    open("http://c.51wnl.com/API/GetConstellationV2.ashx?starname=#{name}") do |http|  
+       html_response = http.read  
+    end
+    puts html_response
+    json = JSON.parse(html_response)
+    date = json["Date"]
+    if date
+      xz = Xz.find_by_downloaded_at_and_name(date,name)
+      if not xz
+        xz = Xz.new 
+        xz.downloaded_at = date
+        xz.name = name
+        xz.innfo = html_response
+        xz.save    
+      end
+    end
+  end
+end
+
+Xz.all_names.each do |name|
+  puts name
+  XzManager.update_info(name)
+end
+
+
