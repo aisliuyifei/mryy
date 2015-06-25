@@ -7,7 +7,7 @@
     <script src="/js/jquery-fastclick.min.js" type="text/javascript"></script>
 </head>
 <body>
-	<div class="topBanner">
+	<!-- <div class="topBanner">
 		<div class="bannerContent">
 	        <div class="imgContent">
 	            <img class="userImg" src="/img/icon.png">
@@ -19,7 +19,7 @@
 	            </div>
 	        </div>
 	    </div>
-	</div>
+	</div> -->
     <div class="main">
         <div class="mainContent">
             <div class="imgWrapper">
@@ -40,13 +40,6 @@
         </div>
     </div>
 </body>
-<script>
-	var window_height = parseInt($(window).height());
-	var img_height = parseInt($('.contentImg').css("height"));
-	var top_bar_height =  parseInt($('.topBanner').css("height"));
-	var margin_top = img_height-(window_height-top_bar_height);
-	$('.contentImg').css('margin-top',''+(-margin_top)+'px');
-</script>
 	
 <footer>
   <script type="text/javascript">
@@ -54,6 +47,15 @@
       var cpro_id = "u2169275";
   </script>
   <script src="http://cpro.baidustatic.com/cpro/ui/cm.js" type="text/javascript"></script>
+  <script>
+  	var window_height = parseInt($(window).height());
+  	var img_height = parseInt($('.contentImg').css("height"));
+  	var top_bar_height = 0;
+  	var margin_top = img_height-(window_height-top_bar_height);
+  	if(margin_top>0){
+  		$('.contentImg').css('margin-top',''+(-margin_top)+'px');
+  	}
+  </script>
 </footer>	
 	
 </html>

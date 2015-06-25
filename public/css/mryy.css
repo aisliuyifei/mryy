@@ -141,27 +141,14 @@ a:active{
 .downloadTxt+.downloadTxt{
     margin-top: 3px;
 }
-@font-face {
-    font-family: 'HelveticaUltra';
-    src:url('../font/Helvetica LT 25 Ultra Light.ttf')  format('truetype'), /* Safari, Android, iOS */
-        url('../font/Helvetica LT 25 Ultra Light.svg#HelveticaNeueLT-UltraLight') format('svg'); /* Legacy iOS */
-    font-weight: normal;
-    font-style: normal;
-}
-@font-face {
-    font-family: 'HelveticaThin';
-    src:url('../font/Helvetica LT 35 Thin.ttf')  format('truetype'), /* Safari, Android, iOS */
-    url('../font/Helvetica LT 35 Thin.svg#HelveticaNeueLT-Thin') format('svg'); /* Legacy iOS */
-    font-weight: normal;
-    font-style: normal;
-}
+
 .mainContent{
     width: 100%;
     margin: 0 auto;
 }
 .imgWrapper{
     position: relative;
-    margin: 66px auto 0;
+    margin: 0;
     border: 2px solid #ffffff;
     -webkit-box-shadow: 0 0 1px rgba(0,0,0,0.3);
     -moz-box-shadow: 0 0 1px rgba(0,0,0,0.3);
