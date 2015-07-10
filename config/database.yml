@@ -10,8 +10,15 @@ default: &default
   timeout: 5000
 
 development:
-  <<: *default
-  database: db/development.sqlite3
+  adapter: mysql2
+  host: rdsbam67br2y3af.mysql.rds.aliyuncs.com
+  port: 3306
+  encoding: utf8
+  database: mryy
+  pool: 12
+  timeout: 1500
+  username: wp_admin
+  password: 123qwe
 
 # Warning: The database defined as "test" will be erased and
 # re-generated from your development database when you run "rake".

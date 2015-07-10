@@ -29,6 +29,7 @@ gem 'bootstrap-will_paginate'
 gem 'simple_form'
 gem 'simple_form-bootstrap'
 gem "cocoon"
+gem 'mysql2'
 
 # Use ActiveModel has_secure_password
 # gem 'bcrypt', '~> 3.1.7'

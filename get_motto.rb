@@ -26,6 +26,7 @@ date = json["date"]
 content = json["result"]["S"]
 img = json["result"]["LargeImg"]
 
+puts "CONTENT:#{content},date:#{date},img:#{img}"
 if date && content && img
   motto = Motto.find_by_downloaded_at(date)
   if not motto
