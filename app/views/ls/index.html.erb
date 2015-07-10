@@ -1,0 +1,45 @@
+<%= content_for :title do%>
+今日历史
+<%end%>
+ 
+<link rel="stylesheet" href="css/ls.css">
+<script type="text/javascript" src="js/zepto.js"></script>
+<script type="text/javascript" src="js/ls.js"></script>
+<div id="main_m">
+     <header>
+         <a id="todayBtn" class="today" href="javascript:void(0)">今天</a>
+         <span>今日历史</span>
+         <a id="closeBtn"  class="close" href="javascript:void(0)"></a>
+     </header>
+     <div class="content">
+         <div class="topSelectContent">
+             <div class="dayInfo">
+                 <div class="preve">
+                     <a id="preveBtn" href="javascript:void(0)"></a>
+                 </div>
+                 <div class="day">
+                     <span class="dayShow"></span>
+                     <span class="dayCount"></span>
+                 </div>
+                 <div class="next">
+                     <a id="nextBtn" href="javascript:void(0)"></a>
+                 </div>
+             </div>
+         </div>
+         <div class="tempList">
+             <ul>
+                 <li class="item hidden">
+                     <span class="year"></span>
+                     <span class="title"></span>
+                 </li>
+             </ul>
+         </div>
+         <div class="contentList">
+             <ul>
+             </ul>
+         </div>
+     </div>
+ </div>
+ <div class="mask hidden"></div>
+ <a class="shareLink hidden" href="javascript:void(0)"><span class="clickContent"></span></a>
+ 

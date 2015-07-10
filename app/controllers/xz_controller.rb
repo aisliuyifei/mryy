@@ -1,3 +1,5 @@
+require 'open-uri'
+require 'net/http'
 class XzController < ApplicationController
   def index
   end
